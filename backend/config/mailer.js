@@ -120,7 +120,7 @@ async function sendWelcomeEmail(toEmail, userName) {
               <table cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td align="center" style="padding:8px 0 32px;">
-                    <a href="http://localhost:5173/login"
+                    <a href="https://local-worker-1.onrender.com/login"
                        style="background:#d4a853;color:#1a1208;text-decoration:none;font-weight:700;font-size:15px;padding:14px 36px;border-radius:10px;display:inline-block;letter-spacing:0.3px;">
                       Go to Your Dashboard →
                     </a>

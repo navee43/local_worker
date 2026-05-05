@@ -154,10 +154,21 @@ export default function EmployerDashboard() {
 
   useEffect(() => {
     loadAll();
-    const socket = io("http://localhost:3000", {transports:["websocket"]});
-    socketRef.current = socket;
-    const user = JSON.parse(localStorage.getItem("kaamsetu_user") || "{}");
-    if (user?.id) socket.emit("register_employer", user.id);
+    // const socket = io("http://localhost:3000", {transports:["websocket"]});
+    // socketRef.current = socket;
+    // const user = JSON.parse(localStorage.getItem("kaamsetu_user") || "{}");
+    // if (user?.id) socket.emit("register_employer", user.id);
+    const socket = io(import.meta.env.VITE_BACKEND_URL, {
+  transports: ["websocket", "polling"]
+});
+
+socketRef.current = socket;
+
+const user = JSON.parse(localStorage.getItem("kaamsetu_user") || "{}");
+
+if (user?.id) {
+  socket.emit("register_employer", user.id);
+}
 
     // New request from a worker → reload + toast
     socket.on("new_request", (data:any) => {

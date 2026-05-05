@@ -20,7 +20,11 @@ const PORT = process.env.PORT || 3000;
 // ── Socket.IO ─────────────────────────────────────────────────────────────────
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://local-worker-1.onrender.com"
+    ],
     credentials: true,
   },
 });
@@ -76,9 +80,13 @@ module.exports.emitToEmployer = (userId, event, data) => {
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://local-worker-1.onrender.com"
+    ],
     credentials: true,
-  }),
+  })
 );
 // app.options("*", cors());
 
