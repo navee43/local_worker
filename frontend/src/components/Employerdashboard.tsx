@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { io, Socket } from "socket.io-client";
 import {
-  Home, Briefcase, Users, FileText, AlertCircle, LogOut,
+  Home, Briefcase, Users, AlertCircle, LogOut,
   Bell, Settings, ChevronRight, Star, MapPin, IndianRupee,
-  CheckCircle, Clock, XCircle, Plus, Search,
-  ArrowRight, Building2, Phone, Send,
-  CreditCard, CalendarDays, Eye, Edit3, Mic, Loader2,
+  CheckCircle, XCircle, Plus, Search,
+  ArrowRight, Building2, Send,
+  CreditCard,  Edit3, Mic, Loader2,
   UserCheck, Hammer, AlertTriangle,
-  X, Wallet, Camera, Mail, Globe, Save, Shield, Upload,
+  X, Wallet, Camera,  Save, Shield,
   ListChecks, RefreshCw, Lock, ScanLine, BadgeCheck, Navigation
 } from "lucide-react";
 import {
