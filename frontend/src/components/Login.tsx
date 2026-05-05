@@ -8,7 +8,7 @@ export default function Login() {
   const [searchParams] = useSearchParams();
   const [form, setForm] = useState({ phone: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {

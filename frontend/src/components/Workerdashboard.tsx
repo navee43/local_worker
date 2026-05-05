@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { io, Socket } from "socket.io-client";
 import {
-  User, Phone, Mail, MapPin, Briefcase, Star, Award, TrendingUp,
+  User, Phone, Mail, MapPin, Briefcase, Star, Award, 
   CheckCircle, Clock, XCircle, ChevronRight, Camera,
   Hammer, Bell, LogOut, Home, FileText, Search,
   Shield, Zap, Gift, AlertCircle, Edit3, Save,
@@ -11,7 +11,7 @@ import {
 import {
   fetchWorkerProfile, saveWorkerProfile, runAadhaarOcr,
   fetchAvailableJobs, applyToJob, redeemVoucher,
-  submitComplaint, fetchComplaints,
+  submitComplaint,
 } from "../api/Worker";
 
 // ── Theme ─────────────────────────────────────────────────────────────────────

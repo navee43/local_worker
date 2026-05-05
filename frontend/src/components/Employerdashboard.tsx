@@ -126,7 +126,7 @@ export default function EmployerDashboard() {
   const [hired, setHired]       = useState<any[]>([]);
   const [loading, setLoading]   = useState(true);
   const [toast, setToast]       = useState<{msg:string;type:"success"|"error"|"info"}|null>(null);
-  const [showNotifPanel, setShowNotifPanel] = useState(false);
+  const [,setShowNotifPanel] = useState(false);
   const socketRef = useRef<Socket|null>(null);
 
   const showToast = (msg:string, type:"success"|"error"|"info"="success") => setToast({msg,type});
